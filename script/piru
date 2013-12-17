@@ -1,0 +1,10 @@
+#!/usr/bin/env gosh
+
+(use piru.cli)
+
+(define (main args)
+  (run args))
+
+;; Local Variables:
+;; mode: scheme
+;; End:
