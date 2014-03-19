@@ -5,5 +5,5 @@
          "lib/piru/cli.scm"
          "lib/piru/command.scm"
          "lib/piru/command/service.scm"
-         "skripti/piru"
+         "skript/piru"
          )))
