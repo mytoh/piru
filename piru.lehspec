@@ -1,11 +1,9 @@
 (spec
  (name "piru")
- (files (  
-                   "piru.lehspec"
-                   "lib/cli.scm"
-                   "lib/command.scm"
-                   "lib/command/service.scm"
-                   "skripti/piru"
-                   ))
-
- )
+ (files (
+         "piru.lehspec"
+         "lib/piru/cli.scm"
+         "lib/piru/command.scm"
+         "lib/piru/command/service.scm"
+         "skripti/piru"
+         )))
