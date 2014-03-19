@@ -1,7 +1,6 @@
 
-(define-module piru.command
-
-  (export service)
-
-  (use piru.command.service)
-  )
+(define-library (piru command)
+    (export service)
+  (import
+    (scheme base)
+    (piru command service)))

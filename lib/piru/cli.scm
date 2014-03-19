@@ -1,9 +1,11 @@
 
-(define-module piru.cli
-
-  (export run)
-  (use util.match)
-  (use piru.command)
+(define-library (piru cli)
+    (export run)
+  (import
+    (scheme base)
+    (gauche base)
+    (util match)
+    (piru command))
 
   (begin
 
@@ -11,7 +13,7 @@
       (let ((command (cadr args))
             (rest (cddr args)))
         (match command
-          ("service"
-           (service rest)))))
+               ("service"
+                (service rest)))))
 
     ))

@@ -1,18 +1,19 @@
-(define-module piru.command.service
-
-  (export service)
-
-  (use util.match)
-  (use gauche.process)
-
+(define-library (piru command service)
+    (export service)
+  (import
+    (scheme base)
+    (scheme write)
+    (gauche base)
+    (util match)
+    (gauche process))
   (begin
 
     (define (service args)
       (match (car args)
-        ("all"
-         (all-service))
-        ("active"
-         (active-service))))
+             ("all"
+              (all-service))
+             ("active"
+              (active-service))))
 
     ;;; util
     (define (service-command opt)
