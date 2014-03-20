@@ -17,7 +17,8 @@
 
     ;;; util
     (define (service-command opt)
-      (process-output->string-list (append '(service) (list opt))))
+      (process-output->string-list (append '(service)
+                                     (list (string->symbol opt)))))
 
     ;;; active service
     (define (active-service)
@@ -25,7 +26,7 @@
        (active-list-services)))
 
     (define (active-list-services)
-      (let ((services (service-command '|-e|)))
+      (let ((services (service-command "-e")))
         (map
             (lambda (p)
               (sys-basename p))
@@ -43,6 +44,6 @@
     (define (all-service)
       (for-each
           print
-        (service-command '|-l|)))
+        (service-command "-l")))
 
     ))
